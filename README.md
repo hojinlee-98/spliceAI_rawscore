@@ -1,11 +1,12 @@
-![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/486d2656-b137-4025-82b9-274564aa42d8)![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/4009b1b1-576d-4670-8139-32113b35143a)# spliceAI_rawscore  
+# spliceAI_rawscore  
 this repository is for showing my method to use raw score of spliceAI.  
 
 # Background  
 When we have to predict the consequence of splicing site mutation, we can utilize spliceAI.  
 
 # Biological question  
-![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/8796e047-6b15-4286-8954-34fb6417e476)
+![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/b8fc9d66-ce84-4652-95d6-74cbc0857264)
+
 
 # Method  
 ```
@@ -28,15 +29,30 @@ cat ./${gene}/human_g1k_v37_chr${chrom}.fasta | tr -d '\n' > ./${gene}/human_g1k
 rm ./${gene}/human_g1k_v37_chr${chrom}.fasta # remove tmp file
 
 ```
+![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/ec5e5670-d52c-49e4-a106-636ff9f330aa)
 
 
+```
+gene=`echo $1`
+echo "start" > ./${gene}/gencode_v24lift37_${gene}_hj.txt
+grep "${gene}" 20230708_gencode_v24lift37_hj.txt | awk -F '\t' '{print $5}' | sort -n >> ./${gene}/gencode_v24lift37_${gene}_hj.txt
+echo "end" >> ./${gene}/gencode_v24lift37_${gene}_hj.txt
+grep "${gene}" 20230708_gencode_v24lift37_hj.txt | awk -F '\t' '{print $6}' | sort -n -r >> ./${gene}/gencode_v24lift37_${gene}_hj.tx![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/5da9b5c7-dc82-4045-b815-97e010766645)
 
-![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/cf560bfe-4497-4883-b69f-3b95cadb3b8a)
+(spliceai) hojin@ihojin-ui-iMac PRIM2 % cat gencode_v24lift37_PRIM2_hj.txt 
+start
+57179602
+57182421
+57182421
+end
+57513375
+57191168
+57191161
 
+python spliceai_prediction_wt_mt_Nov072023_hj.py 6 PRIM2 57372356 G C 57179602 57513375![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/a72f8a66-4592-4a96-aab6-23a2e1ea9e64)
 
+```
+![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/6ba2d37d-d5ec-4184-bcd6-fe646bfbd5b4)
 
+![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/e932012b-9cb9-4972-bf15-22599ead8f5e)
 
-![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/33a3da56-3857-4196-96b5-06342e1b628f)
-
-
-![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/7948f152-cf68-4ef9-a0c6-8f408bf57a60)
