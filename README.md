@@ -38,9 +38,9 @@ rm ./${gene}/human_g1k_v37_chr${chrom}.fasta # remove tmp file
 ```
 gene=`echo $1`
 echo "start" > ./${gene}/gencode_v24lift37_${gene}_hj.txt
-grep "${gene}" 20230708_gencode_v24lift37_hj.txt | awk -F '\t' '{print $5}' | sort -n >> ./${gene}/gencode_v24lift37_${gene}_hj.txt
+grep "\s${gene}\s" 20230708_gencode_v24lift37_hj.txt | awk -F '\t' '{print $5}' | sort -n >> ./${gene}/gencode_v24lift37_${gene}_hj.txt
 echo "end" >> ./${gene}/gencode_v24lift37_${gene}_hj.txt
-grep "${gene}" 20230708_gencode_v24lift37_hj.txt | awk -F '\t' '{print $6}' | sort -n -r >> ./${gene}/gencode_v24lift37_${gene}_hj.tx![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/5da9b5c7-dc82-4045-b815-97e010766645)
+grep "\s${gene}\s" 20230708_gencode_v24lift37_hj.txt | awk -F '\t' '{print $6}' | sort -n -r >> ./${gene}/gencode_v24lift37_${gene}_hj.tx![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/5da9b5c7-dc82-4045-b815-97e010766645)
 
 (spliceai) hojin@ihojin-ui-iMac PRIM2 % cat gencode_v24lift37_PRIM2_hj.txt 
 start
