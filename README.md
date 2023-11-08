@@ -56,3 +56,6 @@ python spliceai_prediction_wt_mt_Nov072023_hj.py 6 PRIM2 57372356 G C 57179602 5
 
 ![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/e932012b-9cb9-4972-bf15-22599ead8f5e)
 
+
+# Conclusion
+The variants located in splicing site remove exon 8. 
