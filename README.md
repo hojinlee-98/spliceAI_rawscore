@@ -4,6 +4,9 @@ this repository is for showing my method to use raw score of spliceAI.
 # Background  
 When we have to predict the consequence of splicing site mutation, we can utilize spliceAI.  
 
+![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/a29cb938-82cb-4e28-981c-2d3434e25133)
+
+
 # Biological question  
 ![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/b8fc9d66-ce84-4652-95d6-74cbc0857264)
 
@@ -29,7 +32,7 @@ cat ./${gene}/human_g1k_v37_chr${chrom}.fasta | tr -d '\n' > ./${gene}/human_g1k
 rm ./${gene}/human_g1k_v37_chr${chrom}.fasta # remove tmp file
 
 ```
-![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/ec5e5670-d52c-49e4-a106-636ff9f330aa)
+![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/4399cd8f-f1af-483d-8ae7-b4e7f4e92a6c)
 
 
 ```
@@ -52,10 +55,13 @@ end
 python spliceai_prediction_wt_mt_Nov072023_hj.py 6 PRIM2 57372356 G C 57179602 57513375![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/a72f8a66-4592-4a96-aab6-23a2e1ea9e64)
 
 ```
-![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/6ba2d37d-d5ec-4184-bcd6-fe646bfbd5b4)
+![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/7e53619a-9813-4cf6-a705-9007a88cbe01)
 
 ![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/e932012b-9cb9-4972-bf15-22599ead8f5e)
 
 
 # Conclusion
 The variants located in splicing site remove exon 8. 
+
+# Limitation
+![image](https://github.com/hojinlee-98/spliceAI_rawscore/assets/121307215/04c9e5af-ce53-4ec5-8805-67ebb802f66e)
